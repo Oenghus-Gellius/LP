@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include <vector>
 
 #include "Estoque.h"
 
@@ -10,7 +11,6 @@ Implemente as duas classes definidas acima e crie um programa para:
 a) Criar três estoques de acordo com o tipo do produto: alimentos, limpeza e higiene pessoal.
 
 b) Cadastrar no estoque o nome, a quantidade e o preço de um produto segundo o tipo do
-
 estoque escolhido pelo usuário.
 
 c) Calcular e exibir o valor total de cada estoque criado pelo usuário.
@@ -42,6 +42,19 @@ Produto Quantidade	Preço Unitário	Valor Total
 Total de Peças no Estoque: 999 Valor Total do Estoque: R$ 999.999,99
 -----------------------------------------------------------------------
 */
+
+using namespace std;
+
+class ControlStock
+{
+public:
+	ControlStock() = default;
+	
+	int admStock();
+
+};
+
+
 
 
 

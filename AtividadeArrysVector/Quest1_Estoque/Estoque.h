@@ -29,6 +29,9 @@ public:
 	contrário retorna false. */
 	bool removerProduto(int posicao);
 
+
+	void printRelatoriun(string info);
+
 private:
 	// Relação de produtos do estoque.
 	vector<Produto> estoque;

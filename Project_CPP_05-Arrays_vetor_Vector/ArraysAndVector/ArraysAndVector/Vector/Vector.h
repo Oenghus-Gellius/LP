@@ -3,40 +3,40 @@
 
 using namespace std;
 
-// Representa um vetor dinâmico que armazena números inteiros (int).
+// Representa um vetor dinï¿½mico que armazena nï¿½meros inteiros (int).
 class Vector {
 private:
-	vector<int> intVector; // O vector é um vetor dinâmico.
+	vector<int> intVector; // O vector ï¿½ um vetor dinï¿½mico.
 
 public:
-	//O vector C++ é um vetor dinamico e está armazenara valores primitivos do tipo int
+	//O vector C++ ï¿½ um vetor dinamico e estï¿½ armazenara valores primitivos do tipo int
 	Vector() = default;
 
-	// Adiciona um número no Vector.
+	// Adiciona um nï¿½mero no Vector.
 	void adicionar(int numero);
 
-	// Obtém o número atual de elementos do vector.
+	// Obtï¿½m o nï¿½mero atual de elementos do vector.
 	vector<int>::size_type tamanho();
 
-	/* Obtém o número máximo de elementos do vector, ou seja, a capacidade atual de 
-	   armazenar os elementos sem alocar memória. 
+	/* Obtï¿½m o nï¿½mero mï¿½ximo de elementos do vector, ou seja, a capacidade atual de 
+	   armazenar os elementos sem alocar memï¿½ria. 
 	*/
 	vector<int>::size_type capacidade();
 
 	// Exibe as propriedades (nome, elementos, tamanho e capacidade) do Vector.
 	void printVector(string nome = "");
 
-	// Apaga todos os números do Vector.
+	// Apaga todos os nï¿½meros do Vector.
 	void excluir();
 
-	// Obtém uma cópia dos números do Vector.
+	// Obtï¿½m uma cï¿½pia dos nï¿½meros do Vector.
 	vector<int> getVector();
 
-	/* Obtém uma referência do Vector.
+	/* Obtï¿½m uma referï¿½ncia do Vector.
 	 
-	   ATENÇÃO: ao retornar a referência de um atributo privado o código chamador do método 
-	            abaixo poderá alterar esse atributo diretamente, ou seja, quebra-se o 
-				encapsulamento. Portanto, essa é considerada uma prática de programação ruim.
+	   ATENï¿½ï¿½O: ao retornar a referï¿½ncia de um atributo privado o cï¿½digo chamador do mï¿½todo 
+	            abaixo poderï¿½ alterar esse atributo diretamente, ou seja, quebra-se o 
+				encapsulamento. Portanto, essa ï¿½ considerada uma prï¿½tica de programaï¿½ï¿½o ruim.
 	*/
 	vector<int>& getRefVector();
 };
