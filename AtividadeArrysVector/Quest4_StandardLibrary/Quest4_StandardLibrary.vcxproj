@@ -127,10 +127,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Standard_Library.h" />
+    <ClInclude Include="TestarVetor.h" />
+    <ClInclude Include="vetor.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Standard_Library.cpp" />
+    <ClCompile Include="TestarVetor.cpp" />
+    <ClCompile Include="vetor.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
