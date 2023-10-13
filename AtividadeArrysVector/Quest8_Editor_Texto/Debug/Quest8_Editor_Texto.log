@@ -1,0 +1,30 @@
+﻿  Texto.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\optional(74,26): error C2625: 'std::_Optional_destruct_base<_Ty,true>::_Value': membro de união inválido; o tipo 'Linha &' é um tipo de referência
+          with
+          [
+              _Ty=Linha &
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\optional(139,35): message : consulte a referência à instanciação 'std::_Optional_destruct_base<_Ty,true>' do modelo da classe que está sendo compilada
+          with
+          [
+              _Ty=Linha &
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xsmf_control.h(86,35): message : consulte a referência à instanciação 'std::_Optional_construct_base<_Ty>' do modelo da classe que está sendo compilada
+          with
+          [
+              _Ty=Linha &
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\xsmf_control.h(123,35): message : consulte a referência à instanciação 'std::_Non_trivial_copy_assign<std::_Optional_construct_base<_Ty>,_Ty>' do modelo da classe que está sendo compilada
+          with
+          [
+              _Ty=Linha &
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\optional(214,26): message : consulte a referência à instanciação 'std::_Non_trivial_move_assign<std::_Optional_construct_base<_Ty>,_Ty>' do modelo da classe que está sendo compilada
+          with
+          [
+              _Ty=Linha &
+          ]
+E:\Funes\GitHub\LP\AtividadeArrysVector\Quest8_Editor_Texto\Texto.cpp(21,25): message : consulte a referência à instanciação 'std::optional<Linha &>' do modelo da classe que está sendo compilada
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\optional(221,62): error C2338: static_assert failed: 'T in optional<T> must meet the Cpp17Destructible requirements (N4950 [optional.optional.general]/3).'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\optional(373,37): error C2528: '->': você não pode criar um ponteiro para uma referência
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\optional(379,31): error C2528: '->': você não pode criar um ponteiro para uma referência
