@@ -24,7 +24,7 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.3282
           [
               _Ty=Linha &
           ]
-E:\Funes\GitHub\LP\AtividadeArrysVector\Quest8_Editor_Texto\Texto.cpp(21,25): message : consulte a referência à instanciação 'std::optional<Linha &>' do modelo da classe que está sendo compilada
+E:\Funes\GitHub\LP\AtividadeArrysVector\Quest8_Editor_Texto\Texto.cpp(25,25): message : consulte a referência à instanciação 'std::optional<Linha &>' do modelo da classe que está sendo compilada
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\optional(221,62): error C2338: static_assert failed: 'T in optional<T> must meet the Cpp17Destructible requirements (N4950 [optional.optional.general]/3).'
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\optional(373,37): error C2528: '->': você não pode criar um ponteiro para uma referência
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\optional(379,31): error C2528: '->': você não pode criar um ponteiro para uma referência

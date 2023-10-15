@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Quest1_4.34", "Quest1_4.34\Quest1_4.34.vcxproj", "{3270BD61-8F49-43BE-A988-8BDF042F55EA}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Quest3_Hexadecimal", "Quest3_Hexadecimal\Quest3_Hexadecimal.vcxproj", "{4E014804-0819-4E2B-8611-E8D9A644C188}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{3270BD61-8F49-43BE-A988-8BDF042F55EA}.Release|x64.Build.0 = Release|x64
 		{3270BD61-8F49-43BE-A988-8BDF042F55EA}.Release|x86.ActiveCfg = Release|Win32
 		{3270BD61-8F49-43BE-A988-8BDF042F55EA}.Release|x86.Build.0 = Release|Win32
+		{4E014804-0819-4E2B-8611-E8D9A644C188}.Debug|x64.ActiveCfg = Debug|x64
+		{4E014804-0819-4E2B-8611-E8D9A644C188}.Debug|x64.Build.0 = Debug|x64
+		{4E014804-0819-4E2B-8611-E8D9A644C188}.Debug|x86.ActiveCfg = Debug|Win32
+		{4E014804-0819-4E2B-8611-E8D9A644C188}.Debug|x86.Build.0 = Debug|Win32
+		{4E014804-0819-4E2B-8611-E8D9A644C188}.Release|x64.ActiveCfg = Release|x64
+		{4E014804-0819-4E2B-8611-E8D9A644C188}.Release|x64.Build.0 = Release|x64
+		{4E014804-0819-4E2B-8611-E8D9A644C188}.Release|x86.ActiveCfg = Release|Win32
+		{4E014804-0819-4E2B-8611-E8D9A644C188}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

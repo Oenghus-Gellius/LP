@@ -5,10 +5,10 @@
 using namespace std;
 
 /*
-*    int vetor[2];		// Define um vetor de 2 números int
-*	 int& refV[2];		// ERRO: Array (vetor) de referência é ilegal.
-*    int (& refV)[2] = vetor; // Define uma referência para um vetor de 2 números int.
-*    int (*ptrFunc)(); // Ponteiro de função para uma função que recebe nada e retorna int.
+*    int vetor[2];		// Define um vetor de 2 nï¿½meros int
+*	 int& refV[2];		// ERRO: Array (vetor) de referï¿½ncia ï¿½ ilegal.
+*    int (& refV)[2] = vetor; // Define uma referï¿½ncia para um vetor de 2 nï¿½meros int.
+*    int (*ptrFunc)(); // Ponteiro de funï¿½ï¿½o para uma funï¿½ï¿½o que recebe nada e retorna int.
 *
 *   Calcula o tamanho de um vetor de qualquer tipo de dado.
 */
@@ -29,9 +29,8 @@ public:
 	template <typename T, unsigned tamanho> 
 	void imprimirVetor(string mensagem, const T(&vetor)[tamanho]);
 
-	/* Inicia um vetor de qualquer tipo de dado começando em inicio e com incremento ou 
-	    decremento definido por passo.
-	*/
+	/* Inicia um vetor de qualquer tipo de dado comeï¿½ando em inicio e com 
+	incremento ou decremento definido por passo.	*/
 	template <typename T, unsigned tamanho> 
 	void iniciarVetor(T(&vetor)[tamanho], T inicio, T passo);
 };

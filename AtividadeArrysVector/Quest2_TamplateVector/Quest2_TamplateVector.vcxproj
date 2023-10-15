@@ -129,9 +129,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Tamplate_Vector.h" />
+    <ClInclude Include="Template_Vetor.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Tamplate_Vector.cpp" />
+    <ClCompile Include="Template_Vetor.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

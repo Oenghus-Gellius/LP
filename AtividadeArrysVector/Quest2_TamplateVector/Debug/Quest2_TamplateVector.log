@@ -1,14 +1,18 @@
-﻿  Tamplate_Vector.cpp
-E:\Funes\GitHub\SO\AtividadeArrysVector\Quest2_TamplateVector\Tamplate_Vector.cpp(36,20): warning C4018: '<': incompatibilidade de signed/unsigned
-E:\Funes\GitHub\SO\AtividadeArrysVector\Quest2_TamplateVector\Tamplate_Vector.cpp(129,24): message : consulte a referência à instanciação 'int Tamplate_Vector::searchInVector<int>(TEMP,std::vector<int,std::allocator<int>> &)' do modelo que está sendo compilada
+﻿  Template_Vetor.cpp
+E:\Funes\GitHub\LP\AtividadeArrysVector\Quest2_TamplateVector\Template_Vetor.cpp(87,20): warning C4305: 'inicializando': truncamento de 'double' para 'float'
+E:\Funes\GitHub\LP\AtividadeArrysVector\Quest2_TamplateVector\Template_Vetor.cpp(87,25): warning C4305: 'inicializando': truncamento de 'double' para 'float'
+E:\Funes\GitHub\LP\AtividadeArrysVector\Quest2_TamplateVector\Template_Vetor.cpp(87,31): warning C4305: 'inicializando': truncamento de 'double' para 'float'
+E:\Funes\GitHub\LP\AtividadeArrysVector\Quest2_TamplateVector\Template_Vetor.cpp(87,37): warning C4305: 'inicializando': truncamento de 'double' para 'float'
+E:\Funes\GitHub\LP\AtividadeArrysVector\Quest2_TamplateVector\Template_Vetor.cpp(35,21): warning C4018: '<': incompatibilidade de signed/unsigned
+E:\Funes\GitHub\LP\AtividadeArrysVector\Quest2_TamplateVector\Template_Vetor.cpp(91,10): message : consulte a referência à instanciação 'void Template_Vetor::ascendingOrder<int,8>(T (&)[8])' do modelo que está sendo compilada
           with
           [
-              TEMP=int
+              T=int
           ]
-E:\Funes\GitHub\SO\AtividadeArrysVector\Quest2_TamplateVector\Tamplate_Vector.cpp(50,20): warning C4018: '<': incompatibilidade de signed/unsigned
-E:\Funes\GitHub\SO\AtividadeArrysVector\Quest2_TamplateVector\Tamplate_Vector.cpp(151,13): message : consulte a referência à instanciação 'void Tamplate_Vector::ascendVector<int>(std::vector<int,std::allocator<int>> &)' do modelo que está sendo compilada
-E:\Funes\GitHub\SO\AtividadeArrysVector\Quest2_TamplateVector\Tamplate_Vector.cpp(52,21): warning C4018: '<': incompatibilidade de signed/unsigned
-E:\Funes\GitHub\SO\AtividadeArrysVector\Quest2_TamplateVector\Tamplate_Vector.cpp(68,20): warning C4018: '<': incompatibilidade de signed/unsigned
-E:\Funes\GitHub\SO\AtividadeArrysVector\Quest2_TamplateVector\Tamplate_Vector.cpp(156,13): message : consulte a referência à instanciação 'void Tamplate_Vector::descendVector<int>(std::vector<int,std::allocator<int>> &)' do modelo que está sendo compilada
-E:\Funes\GitHub\SO\AtividadeArrysVector\Quest2_TamplateVector\Tamplate_Vector.cpp(70,21): warning C4018: '<': incompatibilidade de signed/unsigned
-  Quest2_TamplateVector.vcxproj -> E:\Funes\GitHub\SO\AtividadeArrysVector\Debug\Quest2_TamplateVector.exe
+E:\Funes\GitHub\LP\AtividadeArrysVector\Quest2_TamplateVector\Template_Vetor.cpp(53,21): warning C4018: '<': incompatibilidade de signed/unsigned
+E:\Funes\GitHub\LP\AtividadeArrysVector\Quest2_TamplateVector\Template_Vetor.cpp(93,10): message : consulte a referência à instanciação 'void Template_Vetor::descendingOrder<int,8>(T (&)[8])' do modelo que está sendo compilada
+          with
+          [
+              T=int
+          ]
+  Quest2_TamplateVector.vcxproj -> E:\Funes\GitHub\LP\AtividadeArrysVector\Debug\Quest2_TamplateVector.exe

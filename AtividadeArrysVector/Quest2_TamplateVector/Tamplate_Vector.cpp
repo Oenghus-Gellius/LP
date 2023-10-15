@@ -9,18 +9,6 @@ vector<TEMP> Tamplate_Vector::bornTEMPVector(int size)
 	return vector <TEMP>(size);
 }
 
-vector<int> Tamplate_Vector::setVector(int info)
-{
-	nElementos.push_back(info);
-	return nElementos;
-}
-
-vector<char> Tamplate_Vector::setVector(char info)
-{
-	letras.push_back(info);
-	return letras;
-}
-
 //--------------------------------------------------------------------
 template<typename TEMP>
 void Tamplate_Vector::setVector(TEMP info, vector<TEMP> &vector)
@@ -158,8 +146,8 @@ void testTamplateVector(){
 	vectorTestB.descendVector(letras);
 	vectorTestB.printVector(letras);
 }
-
+/*
 int main() {
-	testTamplateVector();
+
 	return 0;
-}
+}*/

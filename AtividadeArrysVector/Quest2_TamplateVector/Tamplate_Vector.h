@@ -31,12 +31,6 @@ public:
 	template<typename TEMP>
 	vector<TEMP> bornTEMPVector(int size); //<===== SERA?
 
-	//Preenche o vector int para teste do projeto retorna um vetor preenchido;
-	vector<int>setVector(int info);
-
-	//Preenche o vector char para teste do projeto retorna um vetor preenchido;
-	vector<char>setVector(char info);
-
 	//---------------------------------------------------
 	//Preenche o vector TEMP para teste do projeto retorna um vetor preenchido;
 	template<typename TEMP>

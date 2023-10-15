@@ -45,9 +45,7 @@ do texto é a de número um (1).*/
 
 	/* Exclui uma linha de texto segundo o número da linha fornecido como parâmetro. A primeira linha é
 	a de número um (1). Retorna true se a operação de exclusão for bem sucedida, caso contrário
-	retorna false.
-	*/
-
+	retorna false.	*/
 	bool excluirLinha(int numeroLinha);
 
 private:
