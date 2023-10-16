@@ -24,7 +24,12 @@ public:
 
 	/* Obtém um objeto Linha na posição indicada pelo parâmetro formal numeroLinha. A primeira linha é
 	a de número um (1).	*/
-	optional<Linha&> obterLinha(int numeroLinha);
+	optional<Linha> obterLinha(int numeroLinha);
+
+	/*Altera a linha no texto na posição indicada pelo paremetro formal numeroLinha
+	A primenria linha é a de numero 1
+	Retorna true se a alteração for bem sucedida, caso contrario false*/
+	bool alterarLinha(int numeroLinha, Linha linha);
 
 	// Fornece a quantidade de palavras de todo o texto.
 	int quantidadePalavras();

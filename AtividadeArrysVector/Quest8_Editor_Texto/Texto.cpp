@@ -22,7 +22,7 @@ void Texto::adicionarLinha(Linha linha)
 }
 
 
-optional<Linha&> Texto::obterLinha(int numeroLinha)
+optional<Linha> Texto::obterLinha(int numeroLinha)
 {
 	if (numeroLinha > 0 && numeroLinha <= numeroLinhas)
 	{
