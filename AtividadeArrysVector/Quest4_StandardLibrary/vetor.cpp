@@ -2,6 +2,7 @@
 
 #include <iostream>
 
+/*
 Vetor::Vetor(int tamanho)//ok
 {
 	definirTamanho(tamanho);
@@ -182,7 +183,7 @@ int Vetor::indiceReal(int indiceVirtual)//ok
 		{
 			indexReal++;
 		}
-		return indexReal;*/
+		return indexReal;
 		return indiceVirtual - limiteInferior;
 	}
 	// Opção 2 e 3 HAUHAUHAUHAUAHuhaAHUAHAUHAUHA
@@ -193,3 +194,6 @@ void Vetor::definirTamanho(int tamanho)//ok
 {
 	vetor.resize(tamanho);
 }
+
+
+*/

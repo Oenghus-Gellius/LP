@@ -39,7 +39,7 @@ public:
 	void excluirLinha();
 
 	//Obtem um objeto optmal cpm o objeto Linha
-	optional<Linha> linhaOptional = texto.obterLinha(numeroLinhas);
+	optional<Linha> linhaOptional = texto.obterLinha(numeroLinha);
 
 	//recupera o objeto linha do objeto optonal para alterar o seu conteudo
 	Linha linha = linhaOptional.value();

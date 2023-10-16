@@ -1,0 +1,9 @@
+﻿  TestarVetor.cpp
+E:\Funes\GitHub\LP\AtividadeArrysVector\Quest4_Escalonamento\TestarVetor.cpp(26,10): warning C4566: caractere representado por nome de caractere universal (UCN) '\uFFFD' não pode ser representado na página de código atual (1252)
+E:\Funes\GitHub\LP\AtividadeArrysVector\Quest4_Escalonamento\TestarVetor.cpp(28,10): warning C4566: caractere representado por nome de caractere universal (UCN) '\uFFFD' não pode ser representado na página de código atual (1252)
+E:\Funes\GitHub\LP\AtividadeArrysVector\Quest4_Escalonamento\TestarVetor.cpp(30,10): warning C4566: caractere representado por nome de caractere universal (UCN) '\uFFFD' não pode ser representado na página de código atual (1252)
+E:\Funes\GitHub\LP\AtividadeArrysVector\Quest4_Escalonamento\TestarVetor.cpp(32,10): warning C4566: caractere representado por nome de caractere universal (UCN) '\uFFFD' não pode ser representado na página de código atual (1252)
+E:\Funes\GitHub\LP\AtividadeArrysVector\Quest4_Escalonamento\TestarVetor.cpp(63,11): warning C4566: caractere representado por nome de caractere universal (UCN) '\uFFFD' não pode ser representado na página de código atual (1252)
+E:\Funes\GitHub\LP\AtividadeArrysVector\Quest4_Escalonamento\TestarVetor.cpp(69,12): warning C4566: caractere representado por nome de caractere universal (UCN) '\uFFFD' não pode ser representado na página de código atual (1252)
+E:\Funes\GitHub\LP\AtividadeArrysVector\Quest4_Escalonamento\TestarVetor.cpp(73,12): warning C4566: caractere representado por nome de caractere universal (UCN) '\uFFFD' não pode ser representado na página de código atual (1252)
+  Quest4_Escalonamento.vcxproj -> E:\Funes\GitHub\LP\AtividadeArrysVector\Debug\Quest4_Escalonamento.exe
