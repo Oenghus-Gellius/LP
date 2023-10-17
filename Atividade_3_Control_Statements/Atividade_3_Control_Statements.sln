@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Quest5_Algarismo+Romano", "
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Quest7_Shell", "Quest7_Shell\Quest7_Shell.vcxproj", "{87BAD467-64CE-4146-A579-61A9EF0D3AEA}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Quest6_Impressora", "Quest6_Impressora\Quest6_Impressora.vcxproj", "{3F532A3C-131F-4EF1-941F-CC96602E6EC3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{87BAD467-64CE-4146-A579-61A9EF0D3AEA}.Release|x64.Build.0 = Release|x64
 		{87BAD467-64CE-4146-A579-61A9EF0D3AEA}.Release|x86.ActiveCfg = Release|Win32
 		{87BAD467-64CE-4146-A579-61A9EF0D3AEA}.Release|x86.Build.0 = Release|Win32
+		{3F532A3C-131F-4EF1-941F-CC96602E6EC3}.Debug|x64.ActiveCfg = Debug|x64
+		{3F532A3C-131F-4EF1-941F-CC96602E6EC3}.Debug|x64.Build.0 = Debug|x64
+		{3F532A3C-131F-4EF1-941F-CC96602E6EC3}.Debug|x86.ActiveCfg = Debug|Win32
+		{3F532A3C-131F-4EF1-941F-CC96602E6EC3}.Debug|x86.Build.0 = Debug|Win32
+		{3F532A3C-131F-4EF1-941F-CC96602E6EC3}.Release|x64.ActiveCfg = Release|x64
+		{3F532A3C-131F-4EF1-941F-CC96602E6EC3}.Release|x64.Build.0 = Release|x64
+		{3F532A3C-131F-4EF1-941F-CC96602E6EC3}.Release|x86.ActiveCfg = Release|Win32
+		{3F532A3C-131F-4EF1-941F-CC96602E6EC3}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
