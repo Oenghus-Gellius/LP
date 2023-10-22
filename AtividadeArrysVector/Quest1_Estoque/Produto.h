@@ -1,7 +1,6 @@
+// Produto.h - Interface da classe Produto
 #pragma once
-
 #include <string>
-
 using namespace std;
 class Produto {
 public:
@@ -22,11 +21,9 @@ public:
 	double getPreco();
 
 private:
-
 	string nome; // Nome do produto.
 
 	int quantidade = 0; // Quantidade do produto armazenada em estoque.
 
 	double preco = 0; // Preço unitário do produto.
 };
-

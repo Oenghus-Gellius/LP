@@ -1,13 +1,10 @@
 #include "Estoque.h"
 
 #include <iostream>
-#include <cstdlib>
-#include <clocale>
-#include <iomanip>
 
 Estoque::Estoque(int tamanho)
 {
-	estoque.reserve(tamanho);
+	estoque.resize(tamanho);
 }
 
 void Estoque::adicionarProduto(Produto p)
@@ -18,22 +15,23 @@ void Estoque::adicionarProduto(Produto p)
 
 optional<Produto> Estoque::obterProduto(int posicao)
 {
-	if (posicao >= 0 && posicao < quantidadeProdutos)
+	if (posicao > 0 && posicao < quantidadeProdutos)
 	{
-		return optional<Produto>(estoque[posicao]);
+		for (int i = 0; i < posicao; i++)
+		{
+			return optional<Produto>(estoque[posicao]);
+		}
 	}
-	else
-	{
-		return nullopt;
-	}
+	return nullopt;
 }
 
 int Estoque::pesquisarProduto(string nome)
 {
 	for (int i = 0; i < quantidadeProdutos; i++)
 	{
-		if (nome == estoque[i].getNome())
+		if (nome == estoque[i].getNome());
 		{
+
 			return i;
 		}
 	}
@@ -42,32 +40,23 @@ int Estoque::pesquisarProduto(string nome)
 
 bool Estoque::removerProduto(int posicao)
 {
-	if (posicao >= 0 && posicao < quantidadeProdutos)
+	if (posicao > 0 && posicao < quantidadeProdutos)
 	{
-		estoque.erase(estoque.begin() + posicao);
+		for (int i = posicao; i < quantidadeProdutos - 1; i++)
+		{
+			estoque[i] = estoque[i + 1];
+		}
 		quantidadeProdutos--;
+		estoque.resize(quantidadeProdutos);
+		/*	Solução 2
+		estoque.erase(estoque.begin() + posicao);
+		quantidadeProdutos--;		*/
 		return true;
 	}
 	return false;
 }
 
-void Estoque::printRelatoriun(string info)
+int Estoque::getQuantidadeEstoque()
 {
-	double valorTotalStock = 0;
-
-	cout << "Estoque de Gêneros " << info << "\n" << endl;
-	cout << "Produto\t\tQuantidade\tPreço Unitário\tValor Total\n" << endl;
-
-	for (int i = 0; i < quantidadeProdutos; i++)
-	{
-		Produto produto = estoque[i];
-		double valorTotalProd = produto.getQuantidade() * produto.getPreco();
-		valorTotalStock += valorTotalProd;
-
-		cout << i + 1 << ". " << produto.getNome() << "\t" << produto.getQuantidade() << "\t";
-		cout << fixed << setprecision(2) << "\t" << produto.getPreco() << "\tR$ " << valorTotalProd << "\n";
-	}
-
-	cout << "Total de Peças no Estoque: " << quantidadeProdutos << " Valor Total do Estoque: R$ " << valorTotalStock << "\n" << endl;
+	return this->quantidadeProdutos;
 }
-

@@ -1,14 +1,12 @@
+// Estoque.h - Interface da classe Estoque
 #pragma once
-
 #include <vector>
 #include <optional>
 
 #include "Produto.h"
 
 class Estoque {
-
 public:
-
 	// Cria um estoque de produtos com tamanho inicial igual a zero.
 	Estoque() = default;
 
@@ -29,10 +27,10 @@ public:
 	contrário retorna false. */
 	bool removerProduto(int posicao);
 
-
-	void printRelatoriun(string info);
+	int getQuantidadeEstoque();
 
 private:
+
 	// Relação de produtos do estoque.
 	vector<Produto> estoque;
 

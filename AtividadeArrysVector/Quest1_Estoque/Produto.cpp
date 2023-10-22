@@ -1,6 +1,7 @@
 #include "Produto.h"
 
-//Construtora
+#include <iostream>
+
 Produto::Produto(string nome, int quantidade, double preco)
 {
 	setNome(nome);
