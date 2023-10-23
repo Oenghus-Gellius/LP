@@ -48,10 +48,10 @@ public:
 	float totalValorEstoque(Estoque tipoEstoque);
 
 	//d) Calcular e exibir a quantidade de todos os produtos armazenados em cada estoque.
-	int totalQtdProdEstoque(Estoque tipoEstoque);
+	int totalQtdProdEstoque(Estoque& tipoEstoque);
 
 	//e) Localizar no estoque o nome de um produto fornecido pelo usuário.
-	int pesquisaProdutoEstoque(string produto);
+	int pesquisaProdutoEstoque(Estoque estoque, string produto);
 
 	// f) Exibir um relatório usando o leiaute abaixo.
 	void printEstoque(Estoque estoque);

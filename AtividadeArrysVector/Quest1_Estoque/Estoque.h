@@ -20,7 +20,7 @@ public:
 	optional<Produto> obterProduto(int posicao);
 
 	/* Pesquisa o nome do produto no estoque.
-	Retorna a posição do produto no estoque, se o produto não estiver cadastrado retorna -1. */
+	Retorna a posição d(o produto no estoque, se o produto não ))estiver cadastrado retorna -1. */
 	int pesquisarProduto(string nome);
 
 	/* Exclui um produto do estoque na posição indicada. Retorna true se o produto foi excluído, caso

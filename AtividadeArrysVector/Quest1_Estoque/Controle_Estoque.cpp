@@ -12,29 +12,72 @@ Controle_Estoque::Controle_Estoque(Estoque tipoEstoque, int tamanho)
 int Controle_Estoque::superMercadoAlpha()
 { 
 	Estoque Alimento;
-	Estoque Limpleza;
+	Estoque Limpeza;
 	Estoque Higiene;
 
 	int tamanhoEstoque = 50;
 
 	Controle_Estoque(Alimento, tamanhoEstoque);
-	Controle_Estoque(Limpleza, tamanhoEstoque);
+	Controle_Estoque(Limpeza, tamanhoEstoque);
 	Controle_Estoque(Higiene, tamanhoEstoque);
 
 	cadProdInEstoque(Alimento, "CocaCola", 13, 5.50);
 	cadProdInEstoque(Alimento, "Pão de Forma", 9, 8.50);
 	cadProdInEstoque(Alimento, "Feijão", 17, 5.50);
 
-	cadProdInEstoque(Limpleza, "Veja clean", 18, 7.50);
-	cadProdInEstoque(Limpleza, "Sabão", 48, 3.50);
+	cadProdInEstoque(Limpeza, "Veja clean", 18, 7.50);
+	cadProdInEstoque(Limpeza, "Sabão", 48, 3.50);
 
 	cadProdInEstoque(Higiene, "Escoca de dente", 13, 11.50);
 
 	totalQtdProdEstoque(Alimento);
 
-	totalQtdProdEstoque(Limpleza);
+	totalQtdProdEstoque(Limpeza);
 
 	totalQtdProdEstoque(Higiene);
+
+	string produtoPesq = "Feijão";
+
+	int finder = 0;
+	
+	finder = pesquisaProdutoEstoque(Alimento, produtoPesq);
+	if (!finder)
+	{
+		cout << "No estoque" << "Produdo localizado.: " << produtoPesq <<  endl;
+	}
+	else
+	{
+		cout << "Produdo não localizado.: " << produtoPesq << endl;
+	}
+
+	finder = pesquisaProdutoEstoque(Limpeza, produtoPesq);
+	if (!finder)
+	{
+		cout << "Produdo localizado.: " << produtoPesq << endl;
+	}
+	else
+	{
+		cout << "Produdo não localizado.: " << produtoPesq << endl;
+	}
+
+	finder = pesquisaProdutoEstoque(Higiene, produtoPesq);
+	if (!finder)
+	{
+		cout << "Produdo localizado.: " << produtoPesq << endl;
+	}
+	else
+	{
+		cout << "Produdo não localizado.: " << produtoPesq << endl;
+	}
+
+	cout << "- Estoque de Gêneros Alimentícios\n" << endl;
+	printEstoque(Alimento);
+
+	cout << "- Estoque de Gêneros Limpeza\n" << endl;
+	printEstoque(Limpeza);
+
+	cout << "- Estoque de Gêneros Higiene\n" << endl;
+	printEstoque(Higiene);
 
 
 	return 0;
@@ -50,27 +93,30 @@ int Controle_Estoque::cadProdInEstoque(Estoque& nomeEstoque, string nome, int qu
 
 float Controle_Estoque::totalValorEstoque(Estoque tipoEstoque)
 {
-	int index = 0;
 	double valorTotalEstoque = 0.0;
+	auto produtoOpt = tipoEstoque.obterProduto(0);
 	for (int i = 0; i < tipoEstoque.getQuantidadeEstoque(); i++)
-	{
-		valorTotalEstoque = valorTotalEstoque + (tipoEstoque.obterProduto(i)->getQuantidade() * tipoEstoque.obterProduto(i)->getPreco());
-	}
+		 produtoOpt = tipoEstoque.obterProduto(i);
+		if (produtoOpt.has_value())
+		{
+			valorTotalEstoque = valorTotalEstoque + (produtoOpt.value().getQuantidade() * produtoOpt.value().getPreco());
+		}
 	
 	return valorTotalEstoque;
 }
 
-int Controle_Estoque::totalQtdProdEstoque(Estoque tipoEstoque)
+int Controle_Estoque::totalQtdProdEstoque(Estoque& tipoEstoque)
 {
 	int index = 0;
 	unsigned int qtdProdTotal = 0;
-	
-	for (int i = 0; i < tipoEstoque.getQuantidadeEstoque(); i++)
+
+	index = tipoEstoque.getQuantidadeEstoque();
+	for (int i = 0; i < index; i++)
 	{
 		auto produtoOpt = tipoEstoque.obterProduto(i);
 		if (produtoOpt.has_value())
 		{
-			qtdProdTotal = qtdProdTotal + produtoOpt->getQuantidade();
+			qtdProdTotal = qtdProdTotal + produtoOpt.value().getQuantidade();
 		}
 	}
 
@@ -79,8 +125,33 @@ int Controle_Estoque::totalQtdProdEstoque(Estoque tipoEstoque)
 	return qtdProdTotal;
 }
 
+int Controle_Estoque::pesquisaProdutoEstoque(Estoque estoque, string produto)
+{
+	for (int i = 0; i < estoque.getQuantidadeEstoque(); i++)
+	{
+		if (!estoque.pesquisarProduto(produto))
+		{
+			return 0;
+		}
+	}
+	return -1;
+}
+
 void Controle_Estoque::printEstoque(Estoque estoque)
 {
+	auto produtoOpt = estoque.obterProduto(0);
+	cout << "Produto" << "\t\t" << "Quantidade\t" << "Preco Unitario\t" << "\tValor Total" << endl;
+	for (int i = 0; i < estoque.getQuantidadeEstoque(); i++)
+	{
+		produtoOpt = estoque.obterProduto(i);
+		if (produtoOpt.has_value())
+		{
+			cout << (i + 1) << ". " << produtoOpt.value().getNome() << "\t\t\t\t" << produtoOpt.value().getQuantidade() << "\t\t" << produtoOpt.value().getPreco() << "\t" << (produtoOpt.value().getQuantidade() * produtoOpt.value().getPreco()) << endl;
+		}
+	}
+	cout << "... ... ... ... ... " << endl;
+	cout << "Total de Peças no Estoque: " << totalQtdProdEstoque(estoque) << " .: R$ " << totalValorEstoque(estoque) << endl;
+
 }
 
 int main() {
