@@ -20,6 +20,7 @@ private:
 	int positionInAlbum;
 	string genero;
 	int TimeMusic;
+
 public:
 
 	Player() = default;
