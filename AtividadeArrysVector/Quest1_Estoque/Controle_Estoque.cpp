@@ -22,11 +22,11 @@ int Controle_Estoque::superMercadoAlpha()
 	Controle_Estoque(Higiene, tamanhoEstoque);
 
 	cadProdInEstoque(Alimento, "CocaCola", 13, 5.50);
-	cadProdInEstoque(Alimento, "Pão de Forma", 9, 8.50);
-	cadProdInEstoque(Alimento, "Feijão", 17, 5.50);
+	cadProdInEstoque(Alimento, "Pï¿½o de Forma", 9, 8.50);
+	cadProdInEstoque(Alimento, "Feijï¿½o", 17, 5.50);
 
 	cadProdInEstoque(Limpeza, "Veja clean", 18, 7.50);
-	cadProdInEstoque(Limpeza, "Sabão", 48, 3.50);
+	cadProdInEstoque(Limpeza, "Sabï¿½o", 48, 3.50);
 
 	cadProdInEstoque(Higiene, "Escoca de dente", 13, 11.50);
 
@@ -36,7 +36,7 @@ int Controle_Estoque::superMercadoAlpha()
 
 	totalQtdProdEstoque(Higiene);
 
-	string produtoPesq = "Feijão";
+	string produtoPesq = "Feijï¿½o";
 
 	int finder = 0;
 	
@@ -47,7 +47,7 @@ int Controle_Estoque::superMercadoAlpha()
 	}
 	else
 	{
-		cout << "Produdo não localizado.: " << produtoPesq << endl;
+		cout << "Produdo nï¿½o localizado.: " << produtoPesq << endl;
 	}
 
 	finder = pesquisaProdutoEstoque(Limpeza, produtoPesq);
@@ -57,7 +57,7 @@ int Controle_Estoque::superMercadoAlpha()
 	}
 	else
 	{
-		cout << "Produdo não localizado.: " << produtoPesq << endl;
+		cout << "Produdo nï¿½o localizado.: " << produtoPesq << endl;
 	}
 
 	finder = pesquisaProdutoEstoque(Higiene, produtoPesq);
@@ -67,16 +67,16 @@ int Controle_Estoque::superMercadoAlpha()
 	}
 	else
 	{
-		cout << "Produdo não localizado.: " << produtoPesq << endl;
+		cout << "Produdo nï¿½o localizado.: " << produtoPesq << endl;
 	}
 
-	cout << "- Estoque de Gêneros Alimentícios\n" << endl;
+	cout << "- Estoque de Gï¿½neros Alimentï¿½cios\n" << endl;
 	printEstoque(Alimento);
 
-	cout << "- Estoque de Gêneros Limpeza\n" << endl;
+	cout << "- Estoque de Gï¿½neros Limpeza\n" << endl;
 	printEstoque(Limpeza);
 
-	cout << "- Estoque de Gêneros Higiene\n" << endl;
+	cout << "- Estoque de Gï¿½neros Higiene\n" << endl;
 	printEstoque(Higiene);
 
 
@@ -150,7 +150,7 @@ void Controle_Estoque::printEstoque(Estoque estoque)
 		}
 	}
 	cout << "... ... ... ... ... " << endl;
-	cout << "Total de Peças no Estoque: " << totalQtdProdEstoque(estoque) << " .: R$ " << totalValorEstoque(estoque) << endl;
+	cout << "Total de Peï¿½as no Estoque: " << totalQtdProdEstoque(estoque) << " .: R$ " << totalValorEstoque(estoque) << endl;
 
 }
 

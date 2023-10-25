@@ -1,5 +1,7 @@
 #include "Player.h"
 
+#include "Music.h"
+
 #include <clocale>
 #include <iostream>
 #include <cstdlib>
@@ -7,93 +9,109 @@
 #include <optional>
 
 
+vector<Line> Player::listSourse(string playListEnter)
+{
+	vector<Line> sourseList = Reader::read(playListEnter, Reader::SEMICOLON);
+
+	return sourseList;
+}
+
+void Player::setPlayerListVec(vector<Line> listSourse)
+{
+	this->playListVec = listSourse;
+}
+
+void Player::setPlayListNome(string playListNome)
+{
+	this->playListNome = playListNome;
+}
+
+void Player::setMusics(vector<Line> playList) // <-----PAREI AQUI
+{
+	this->vectMusic = Music::createrPlaylistNome(playList);
+}
+
+
+void Player::tamanhoPlayList(vector<Line> playList)
+{
+	this->tamanhoList = playList.size();
+}
+
+int Player::getNomeMusica(string nomeMuscFinder)
+{
+	return 0;
+}
+
+void Player::ceatorPlayList(vector<Line> playList, string playListNome)
+{
+	setPlayListNome(playListNome);
+
+	setPlayerListVec(playList);
+
+	setMusics(playList);
+
+	tamanhoPlayList(playList);
+}
+
+optional<int> Player::pesquisaMusica(vector<Player> playerList, string nomeMuscFinder)
+{
+	if (playerList.)
+	{
+
+	}
+	return optional<int>();
+}
+
 int Player::printPlayList()
 {
+	setlocale(LC_ALL, ".utf8");
+
+	unsigned lin = 1;
+
+	for (Line line : playListVec)
+	{
+		cout << lin++ << ". ";
+
+		for (int position = 1; position <= 5; position = position + 4)
+		{
+			optional<string>titleMusic = line.getData(position);
+
+			if (titleMusic.has_value())
+			{
+				cout << titleMusic.value();
+
+				if (position == 1)
+				{
+					cout << " - ";
+				}
+				else
+				{
+					cout << " s" << endl;
+				}
+			}
+		}
+	}
 
 	return 0;
 }
 
 int Player::testPlayer()
 {
-	vector<Line> playlistFull = Reader::read("playlist.csv", Reader::SEMICOLON);
-	unsigned lin = 1;
+	string nomeSoucer = "playlist.csv";
 
-	setlocale(LC_ALL, ".utf8");
+	string nomePlayListA = "SOURCE";
 
+	vector<Line> vecSourse = listSourse(nomeSoucer);
 
-	for (Line line : playlistFull)
-	{
-		cout << lin++ << ". ";
+	Player playerListSourse;
 
-		for (int position = 1; position <= 5; position = position + 4)
-		{
-			optional<string>titleMusic = line.getData(position);
+	playerListSourse.ceatorPlayList(vecSourse, nomePlayListA);
 
-			if (titleMusic.has_value())
-			{
-				cout << titleMusic.value();
+	playerListSourse.printPlayList();
 
-				if (position == 1)
-				{
-					cout << " - ";
-				}
-				else
-				{
-					cout << " s" << endl;
-				}
-			}
-		}
-	}
+	string pesquisaMusic = "Faroeste Caboclo";
 
-	vector<Line> playlistPais;
-
-	
-	string album = "O Descobrimento do Brasil";
-
-	
-
-	for (Line line : playlistFull)
-	{
-		for (int  position = 2; position <+ 6; position = position + 4)
-		{
-			optional<string> nomeAlbum = line.getData(position);
-
-			if (album == nomeAlbum)
-			{
-				playlistPais.push_back(line);
-			}
-		}
-	}
-
-	lin = 1;
-
-	for (Line line : playlistPais)
-	{
-		cout << lin++ << ". ";
-
-		for (int position = 1; position <= 5; position = position + 4)
-		{
-			optional<string>titleMusic = line.getData(position);
-
-			if (titleMusic.has_value())
-			{
-				cout << titleMusic.value();
-
-				if (position == 1)
-				{
-					cout << " - ";
-				}
-				else
-				{
-					cout << " s" << endl;
-				}
-			}
-		}
-	}
-
-
-
-	printPlayList();
+	//string album = "O Descobrimento do Brasil";
 	return EXIT_SUCCESS;
 }
 

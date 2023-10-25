@@ -1,7 +1,10 @@
 #pragma once
 
+//Interface
+
 #include "Reader/Include/Line.h"
 #include "Reader/Include/Reader.h"
+#include "Music.h"
 
 #include <iostream>
 #include <cstdlib>
@@ -12,28 +15,32 @@ using namespace std;
 class Player
 {
 private:
-	string playList;
+	string playListNome;
 
-	string nomBandaArtista;
-	string nomMusic;
-	string nomAlbum;
-	int positionInAlbum;
-	string genero;
-	int TimeMusic;
+	vector<Line> playListVec;
+
+	int tamanhoList = 0;
+
+	vector<Music> vectMusic;
+
 
 public:
 
 	Player() = default;
 
-	Player(vector<Line>& Playlist, string nomeList);
+	//Organiza as musicas em um banco de dados e retorna objeto organizado
+	vector<Line> listSourse(string playListEnter);
 
+	void setPlayerListVec(vector<Line> listSourse);
+	void setPlayListNome(string playListNome);
+	void setMusics(vector<Line>playList);
+	void tamanhoPlayList(vector<Line> playList);
 
-	int getNomBandaArtista();
-	int getNomMusic();
-	int getNomAlbum();
-	int getPositionInAlbum();
-	int getGenero();
-	int getTimeMusic();
+	int getNomeMusica(string nomeMuscFinder);
+
+	void ceatorPlayList(vector<Line>playList, string playListNome);
+
+	optional<int> pesquisaMusica(vector<Player>playerList, string nomeMuscFinder);
 
 	int printPlayList();
 
