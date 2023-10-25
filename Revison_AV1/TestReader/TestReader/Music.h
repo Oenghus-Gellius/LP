@@ -1,5 +1,7 @@
 #pragma once
 
+//Interface
+
 #include "Reader/Include/Line.h"
 #include "Reader/Include/Reader.h"
 
@@ -10,15 +12,19 @@
 class Music
 {
 private:
+	vector<string>music;
+
 	string nomeMusc;
 	string album;
-	int temp;
+	string temp;
 
 public:
 	Music() = default;
 
 	template<typename T>
 	int addMusic(T nomeMusc, T album, T temp);
+
+	//void setVectMusic();
 
 	void setNomeMusc(string nomeMusc);
 	
@@ -27,7 +33,9 @@ public:
 	template<typename T>
 	void setTemp(T temp);
 
-	void createrPlaylistNome(vector<Line>playList);
+	optional<string>getDataMusic(int position); // <Fazer
+
+	vector<Music> createrPlaylistNome(vector<Line>playList);
 };
 
 

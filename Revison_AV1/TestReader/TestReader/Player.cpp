@@ -28,9 +28,10 @@ void Player::setPlayListNome(string playListNome)
 
 void Player::setMusics(vector<Line> playList) // <-----PAREI AQUI
 {
-	this->vectMusic = Music::createrPlaylistNome(playList);
-}
+	vector<Music> musicList = Music::createrPlaylistNome(playList);
 
+	this->vectMusic = musicList;
+}
 
 void Player::tamanhoPlayList(vector<Line> playList)
 {
@@ -53,12 +54,9 @@ void Player::ceatorPlayList(vector<Line> playList, string playListNome)
 	tamanhoPlayList(playList);
 }
 
-optional<int> Player::pesquisaMusica(vector<Player> playerList, string nomeMuscFinder)
+optional<int> Player::pesquisaMusica(vector<Player> playerList, string nomeMusicFinder)
 {
-	if (playerList.)
-	{
 
-	}
 	return optional<int>();
 }
 
@@ -95,6 +93,38 @@ int Player::printPlayList()
 	return 0;
 }
 
+int Player::printPlayListProcessed()
+{
+	setlocale(LC_ALL, ".utf8");
+
+	unsigned lin = 1;
+
+	cout << "Nome Musica\t\t" << "Album\t\t" << "Tempo" << endl;
+
+	for (Music musica : vectMusic)
+	{
+		cout << lin++ << ". ";
+
+		for (int position = 1; position <= 5; position++)
+		{
+			//optional<string>nome = musica.getDataMusic(2);
+			//optional<string>album = musica.getDataMusic(3);
+			//optional<string>temp = musica.getDataMusic(6);
+
+			optional<string>token = musica.getDataMusic(position);
+
+			if (token.has_value())
+			{
+				cout << token.value() << "\t\t\t";
+			}
+		}
+		cout << "\n" << endl;
+		//cout << "Nome Musica\t\t\t" << "Album\t\t" << "Tempo" << endl;
+	}
+
+	return 0;
+}
+
 int Player::testPlayer()
 {
 	string nomeSoucer = "playlist.csv";
@@ -108,6 +138,10 @@ int Player::testPlayer()
 	playerListSourse.ceatorPlayList(vecSourse, nomePlayListA);
 
 	playerListSourse.printPlayList();
+
+	playerListSourse.printPlayListProcessed();
+
+
 
 	string pesquisaMusic = "Faroeste Caboclo";
 

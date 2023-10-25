@@ -35,10 +35,23 @@ void Music::setTemp(T temp)
 	this->temp = temp;
 }
 
-void Music::createrPlaylistNome(vector<Line> playList)
+optional<string> Music::getDataMusic(int position)// <Fazer
 {
+	if (position >= 0 && position < music.size())
+	{
+		return music[position];
+	}
+	return nullopt;
+}
+
+vector<Music> Music::createrPlaylistNome(vector<Line>playList)
+{
+	vector<Music> musicList;
+
 	for (Line line : playList)
 	{
+		Music music;
+
 		for (int position = 1; position < 6; position++)
 		{
 			optional<string> infoMusic = line.getData(position);
@@ -48,30 +61,28 @@ void Music::createrPlaylistNome(vector<Line> playList)
 				switch (position)
 				{
 				case 1:
+					music.setNomeMusc(token);
 					break;
 				case 2:
-					setNomeMusc(token);
+					music.setAlbum(token);
 					break;
 				case 3:
-					setAlbum(token);
+					
 					break;
 				case 4:
 					break;
 				case 5:
 					break;
 				case 6:
-					setTemp(token);
+					music.setTemp(token);
 					break;
 				default:
 					break;
 				}
 			}
 		}
-		// Criar um objeto Music com as informações extraídas
-		Music music;
-		music.addMusic(nomeMusc, album, temp);
-
 		// Adicionar a música ao vetor vectMusic
-		vectMusic.push_back(music);
+		musicList.push_back(music);
 	}
+	return musicList;
 }

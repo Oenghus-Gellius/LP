@@ -1,2 +1,6 @@
-﻿  Player.cpp
-  TestReader.vcxproj -> E:\Funes\GitHub\LP\Revison_AV1\TestReader\Debug\TestReader.exe
+﻿  Music.cpp
+E:\Funes\GitHub\LP\Revison_AV1\TestReader\TestReader\Music.cpp(40,32): warning C4018: '<': incompatibilidade de signed/unsigned
+  Player.cpp
+E:\Funes\GitHub\LP\Revison_AV1\TestReader\TestReader\Player.cpp(31,35): error C2352: 'Music::createrPlaylistNome': uma chamada de uma função membro não estática requer um objeto
+E:\Funes\GitHub\LP\Revison_AV1\TestReader\TestReader\Music.h(38,16): message : consulte a declaração de 'Music::createrPlaylistNome'
+  Gerando Código...

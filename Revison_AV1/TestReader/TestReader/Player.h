@@ -34,15 +34,18 @@ public:
 	void setPlayerListVec(vector<Line> listSourse);
 	void setPlayListNome(string playListNome);
 	void setMusics(vector<Line>playList);
+
 	void tamanhoPlayList(vector<Line> playList);
 
 	int getNomeMusica(string nomeMuscFinder);
 
 	void ceatorPlayList(vector<Line>playList, string playListNome);
 
-	optional<int> pesquisaMusica(vector<Player>playerList, string nomeMuscFinder);
+	optional<int> pesquisaMusica(vector<Player>playerList, string nomeMusicFinder);
 
 	int printPlayList();
+
+	int printPlayListProcessed();
 
 	int testPlayer();
 };
